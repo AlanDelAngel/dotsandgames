@@ -214,6 +214,7 @@ a:focus {
 .navbar-brand {
   /*la decision de altura la dijo ary*/
   margin-top: 80px;
+  margin-left: -15px;
   display: -webkit-box;
   display: -ms-flexbox;
   position: fixed;
@@ -224,8 +225,14 @@ a:focus {
 }
 
 @media (max-width: 1120px) {
+  .navbar-brand.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    }
+  
   .navbar-brand {
     margin-top: 50px;
+    transition: transform 0.3s ease;
   }
 }
 
@@ -465,6 +472,13 @@ a:focus {
   background-attachment: fixed;
   opacity: 0.25; 
   z-index: -1;
+}
+
+/* iOS override */
+@supports (-webkit-touch-callout: none) {
+  .rent_section::before {
+    background-attachment: scroll; /* Fixes zoomed/pixelated issue on iOS */
+  }
 }
 
 .rent_section .heading_container h2 {

@@ -5,6 +5,29 @@ function openNav() {
         .classList.toggle("menu_btn-style");
 }
 
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector('.navbar-brand');
+
+function handleScroll() {
+    if (window.innerWidth <= 1120) {
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down
+        navbar.classList.add('hidden');
+      } else {
+        // Scrolling up
+        navbar.classList.remove('hidden');
+      }
+    } else {
+      // Always show on larger screens
+      navbar.classList.remove('hidden');
+    }
+
+    lastScrollY = window.scrollY;
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('resize', handleScroll); // Ensure state updates when resizing
+  
 $(".owl-carousel").owlCarousel({
     loop: true,
     margin: 20,

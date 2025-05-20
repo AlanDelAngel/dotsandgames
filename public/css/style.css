@@ -460,7 +460,7 @@ a:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(images/games_bg.png) no-repeat center center;
+  background: url(/public/images/games_bg.png) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.25; 

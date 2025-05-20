@@ -467,18 +467,13 @@ a:focus {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(images_in_css/games_bg.png) no-repeat center center;
+  background-image: url(images_in_css/games_bg.png);
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   opacity: 0.25; 
   z-index: -1;
-}
-
-/* iOS override */
-@supports (-webkit-touch-callout: none) {
-  .rent_section::before {
-    background-attachment: scroll; /* Fixes zoomed/pixelated issue on iOS */
-  }
 }
 
 .rent_section .heading_container h2 {

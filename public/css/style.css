@@ -467,6 +467,13 @@ a:focus {
   z-index: -1;
 }
 
+/* iOS override */
+@supports (-webkit-touch-callout: none) {
+  .rent_section::before {
+    background-attachment: scroll; /* Fixes zoomed/pixelated issue on iOS */
+  }
+}
+
 .rent_section .heading_container h2 {
   color: #6f6e6e;
   margin-bottom: 35px;

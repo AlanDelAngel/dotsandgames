@@ -214,6 +214,7 @@ a:focus {
 .navbar-brand {
   /*la decision de altura la dijo ary*/
   margin-top: 80px;
+  margin-left: -15px;
   display: -webkit-box;
   display: -ms-flexbox;
   position: fixed;
@@ -224,8 +225,14 @@ a:focus {
 }
 
 @media (max-width: 1120px) {
+  .navbar-brand.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    }
+  
   .navbar-brand {
     margin-top: 50px;
+    transition: transform 0.3s ease;
   }
 }
 

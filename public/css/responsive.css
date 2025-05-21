@@ -55,8 +55,17 @@
         justify-content: center;
     }
 
-    .rent_section .rent_container .box {
-        width: 300px;
+    .rent_section .btn-box {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .rent_section .btn-box a{
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 10px 10px;
     }
 
     .contact_section .contact_items {
@@ -136,4 +145,11 @@
         }
 
     }
+}
+
+@media (max-width: 1120px) {
+    .about_section .detail-box {
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+        }
 }

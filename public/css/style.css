@@ -444,7 +444,7 @@ a:focus {
 }
 
 .about_section .img-box img {
-  width: 100%;
+  height: 600px;
 }
 
 .about_section .detail-box {
@@ -1123,11 +1123,11 @@ a:focus {
   margin: 0;
 }
 
-.contact_section .social_container {
+.social_container {
   margin-top: 45px;
 }
 
-.contact_section .social_container .social-box {
+.social_container .social-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1137,7 +1137,7 @@ a:focus {
   margin: 0 auto 20px auto;
 }
 
-.contact_section .social_container .social-box img {
+.social_container .social-box img {
   width: 30px;
   margin-left: 8px;
 }

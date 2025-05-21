@@ -30,6 +30,19 @@
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
 
+  <!-- pop-up de producto agotado -->
+
+  <div class="mainpopup" id="popup" style="display: none;">
+    <div class="popup">
+      <h2>Producto Agotado</h2>
+      <p>Lamentamos informarte que este producto está agotado por el momento. 
+      Una disculpa por las molestias y siguenos en redes para enterarte cuando regrese el stock.</p>
+      <button onclick="cerrarPopup()">Entendido</button>
+    </div>
+  </div>
+
+  <!-- pop-up de producto agotado -->
+
 <body>
   <div class="hero_area">
     <!-- header section strats -->
@@ -50,10 +63,10 @@
             </div>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
-                <a href="index.html">Inicio</a>
-                <a href="about.html">Acerca de Nosotros</a>
-                <a href="games.html">Juegos de Mesa</a>
-                <a href="our_team.html">Nuestro Equipo</a>
+                <a href="index.html"> <img src="images/home.png"> Inicio</a>
+                <a href="about.html"> <img src="images/us.png"> Acerca de Nosotros</a>
+                <a href="games.html"> <img src="images/games.png"> Juegos de Mesa</a>
+                <a href="our_team.html"> <img src="images/contact_us.png"> Nuestro Equipo</a>
               </div>
             </div>
           </div>
@@ -66,19 +79,11 @@
 
   <section class="best_section">
     <div class="container">
-      <div class="book_now">
+      <div class="book_now"  id="loteria">
         <div class="detail-box">
           <h2>
-            Our Best Cars
+            Lotería Mexicana
           </h2>
-          <p>
-            It is a long established fact that a reader will be distracted by the
-          </p>
-        </div>
-        <div class="btn-box">
-          <a href="">
-            Book Now
-          </a>
         </div>
       </div>
     </div>
@@ -86,82 +91,217 @@
 
   <!-- end best section -->
 
+
+
+
   <!-- rent section -->
 
-  <section class="rent_section layout_padding">
-    <div class="container">
-      <div class="rent_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-1.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
+  <section class="slider_section position-relative">
+      <div class="slider_container">
+        <div class="img-box">
+          <video autoplay playsinline controls id="loteria_video">
+            <source src="images/loteria_video.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
         </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-2.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-3.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-4.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-5.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-6.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
+        <div class="detail_container" id="loteria_description">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="detail-box">
+                  <p>
+                    Nuestra lotería contiene los diseños tradicionales de el reconocido juego. 
+                    <br><br>54 cartas con sus nombres en braille.
+                    4 tablas para poder jugar, también con el braille y círculos de velcro forrados 
+                    con tela para poder marcar las casillas.
+                    <br>
+                    <br>
+                    Incluye un alfabeto en braille.
+                  </p>
+                  <a href="sold_out.html" id="button_loteria">
+                    Comprar
+                  </a>
+            </div>            
           </div>
         </div>
       </div>
-      <div class="btn-box">
-        <a href="">
-          See More
-        </a>
+    </section>
+
+    <section class="blog_section layout_padding3-top">
+    <div class="blog_container">
+      <div class="layout_padding2-top">
+        <div class="carousel-wrap ">
+          <div class="owl-carousel">
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/loteria1.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/loteria3.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/loteria4.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/loteria5.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/loteria6.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/loteria7.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/loteria8.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/loteria9.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- end rent section -->
+
+
+
+  <!-- best section -->
+
+  <section class="best_section">
+    <div class="container">
+      <div class="book_now"  id="loteria">
+        <div class="detail-box">
+          <h2>
+            Memorama
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end best section -->
+
+
+
+
+  <!-- rent section -->
+
+  <section class="slider_section position-relative">
+      <div class="slider_container">
+        <div class="detail_container" id="loteria_description">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="detail-box">
+                  <p>
+                    Consiste en 14 pares de cartas, con diseños llamativos e interesantes sobre una misma categoría, la comida!
+                    Estas cartas también contienen su traducción en braille. 
+                    <br><br>
+                    Viene incluido un tablero armable para colocar las cartas y evitar su movimiento.
+                    <br><br>
+                    Incluye un alfabeto en braille.
+                  </p>
+                  <a href="sold_out.html" id="button_memorama">
+                    Comprar
+                  </a>
+            </div>            
+          </div>
+        </div>
+        <div class="img-box">
+          <video autoplay playsinline controls id="loteria_video">
+            <source src="images/memorama_video.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog_section layout_padding3-top">
+    <div class="blog_container">
+      <div class="layout_padding2-top">
+        <div class="carousel-wrap ">
+          <div class="owl-carousel">
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/memorama1.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/memorama4.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/memorama5.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/memorama6.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/memorama8.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="caja">
+                <div class="img-box">
+                  <img src="images/memorama7.jpg" alt="Nuevo Producto">
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- end rent section -->
+
 
   <!-- footer section -->
   <footer class="container-fluid footer_section">

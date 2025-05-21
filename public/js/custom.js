@@ -47,3 +47,21 @@ $(".owl-carousel").owlCarousel({
         }
     }
 });
+
+ document.getElementById('button_loteria').addEventListener('click', function(event) {
+    event.preventDefault(); // Previene ir a sold_out.html
+    document.getElementById('popup').style.display = 'flex'; // Muestra el popup
+  });
+
+  function cerrarPopup() {
+    document.getElementById('popup').style.display = 'none'; // Oculta el popup
+  }
+
+ document.getElementById('button_memorama').addEventListener('click', function(event) {
+    event.preventDefault(); // Previene ir a sold_out.html
+    document.getElementById('popup').style.display = 'flex'; // Muestra el popup
+  });
+
+  function cerrarPopup() {
+    document.getElementById('popup').style.display = 'none'; // Oculta el popup
+  }

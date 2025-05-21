@@ -419,16 +419,20 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 8px 25px;
-  background-color: #f22324;
-  color: #fefdfc;
-  border-radius: #000000;
-  border: 1px solid #f22324;
+  background-color: #A30000;
+  color: #ffffff;
+  border-radius: 0;
+  border: 1px solid #000000;
   margin-top: 15px;
+  transition: transform 0.1s ease;
 }
 
 .about_section .detail-box a:hover {
   background-color: transparent;
-  color: #f22324;
+  font-weight: bold;
+  color: #A30000;
+  border: 1px solid #A30000;
+  animation: vibrate 0.3s linear;
 }
 
 .best_section {
@@ -519,7 +523,7 @@ a:focus {
 .rent_section .rent_container .box {
   width: 340px;
   margin: 30px;
-  background-color: #d5d5d5;
+  background-color: #cdc3b8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -533,12 +537,12 @@ a:focus {
   text-align: center;
   padding: 20px 25px;
   padding-bottom: 0;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .rent_section .rent_container .box .img-box {
   margin: 10px 0px 15px 0px;
-  height: 200px;
+  height: 310px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,11 +552,38 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+
+  padding: 3px; /* space for the border */
+  background: transparent;
+  transition: .5s;
+}
+
+.rent_section .rent_container .box .img-box:hover {
+  transform: scale(1.08);
+  background: linear-gradient(45deg, red, red, red, red, red, red, red, red, orange, yellow,
+   green, cyan, blue, cyan, green,
+   yellow, orange, red, red, red, red, red, red, red, red);
+  background-size: 800% 800%;
+  animation: led-glow 10s linear infinite;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5); /* subtle glow */
 }
 
 .rent_section .rent_container .box .img-box img {
-  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 272px;
+  height: 310px;
 }
+
+@keyframes led-glow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
 
 .rent_section .rent_container .box .img-box a {
   display: inline-block;
@@ -568,17 +599,22 @@ a:focus {
 .rent_section .rent_container .box .price a {
   display: inline-block;
   padding: 8px 25px;
-  margin-bottom: 10px;
-  background-color: #f22324;
+  margin-bottom: 5px;
+  background-color: #185838;
   color: #fefdfc;
   border-radius: #000000;
-  border: 1px solid #f22324;
+  border: 1px solid #ffffff;
+  border-radius: 200px;
   font-weight: bold;
+  transition: .5s;
 }
 
 .rent_section .rent_container .box .price a:hover {
-  background-color: transparent;
-  color: #f22324;
+  transform: scale(1.2);
+}
+
+.rent_section .rent_container .box .price p {
+  font-weight: bolder;
 }
 
 .rent_section .btn-box {
@@ -594,16 +630,27 @@ a:focus {
   display: inline-block;
   text-align: center;
   padding: 10px 65px;
-  background-color: #6b6b6b;
+  background-color: #A30000;
   color: #ffffff;
   border-radius: 0;
-  border: 1px solid #001aff;
+  border: 1px solid #000000;
   margin-top: 35px;
+  transition: transform 0.1s ease;
 }
 
 .rent_section .btn-box a:hover {
-  background-color: #000000;
+  background-color: #004aad;
   color: #fefdfc;
+  animation: vibrate 0.3s linear;
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
 }
 
 .blog_section .blog_container {
@@ -612,6 +659,7 @@ a:focus {
 }
 
 .blog_section .item {
+  background-color: #fff5f5;
   transition: .5s;
 }
 
@@ -884,7 +932,7 @@ a:focus {
 }
 
 .contact_section {
-  background: #240a5e ;
+  background: #004094 ;
   background-size: cover;
   color: #fefdfc;
 }
@@ -920,10 +968,10 @@ a:focus {
 .contact_section .form_container form button {
   display: inline-block;
   padding: 10px 65px;
-  background-color: #f22324;
-  color: #fefdfc;
+  background-color: #fff3e4;
+  color: #004094;
   border-radius: 0;
-  border: 1px solid #f22324;
+  border: 1px solid #fff3e4;
   text-transform: uppercase;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -935,7 +983,7 @@ a:focus {
 
 .contact_section .form_container form button:hover {
   background-color: transparent;
-  color: #f22324;
+  color: #fff3e4;
 }
 
 .contact_section .contact_items {
@@ -1017,14 +1065,14 @@ a:focus {
 
 /* footer section*/
 .footer_section {
-  background-color: #240a5e;
+  background-color: #fff3e4;
   padding: 20px;
 }
 
 .footer_section p {
   margin: 0;
   text-align: center;
-  color: #fefdfc;
+  color: #000000;
 }
 
 .footer_section a {
@@ -1035,5 +1083,5 @@ a:focus {
 #dev_name {
   font-weight: bold;
   text-decoration: underline;
-  color: #137000;
+  color: #0F5C00;
 }

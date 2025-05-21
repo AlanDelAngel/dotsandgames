@@ -145,10 +145,15 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgba(36, 10, 94, 0.9);
+  background-color: #003c8be6;
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.overlay img{
+  height: 30px;
+  padding: 0px 0px 3px 0px;
 }
 
 .overlay .closebtn {
@@ -292,6 +297,7 @@ a:focus {
 
 .slider_section .slider_container .img-box video {
   width: 100%;
+  margin-bottom: -6px;
 }
 
 .slider_section .slider_container .detail_container {
@@ -299,7 +305,7 @@ a:focus {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #240a5e;
+  background-color: #003c8b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -344,17 +350,20 @@ a:focus {
 .slider_section .slider_container .detail_container .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #f22324;
-  color: #fefdfc;
+  background-color: #FFD65C;
+  color: #000000;
+  font-weight: bold;
   border-radius: 0;
-  border: 1px solid #f22324;
+  border: 2px solid #000000;
   text-transform: uppercase;
   margin-top: 35px;
 }
 
 .slider_section .slider_container .detail_container .detail-box a:hover {
   background-color: transparent;
-  color: #f22324;
+  color: #ffcbcb;
+  font-weight: bolder;
+  border: 3px solid #ffcbcb;
 }
 
 .slider_section .carousel-control-prev,

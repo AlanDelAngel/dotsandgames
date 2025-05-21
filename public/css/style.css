@@ -444,7 +444,7 @@ a:focus {
 }
 
 .about_section .img-box img {
-  height: 600px;
+  width: 100%;
 }
 
 .about_section .detail-box {

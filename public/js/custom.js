@@ -65,3 +65,55 @@ $(".owl-carousel").owlCarousel({
   function cerrarPopup() {
     document.getElementById('popup').style.display = 'none'; // Oculta el popup
   }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("loteria_video");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add fade-in class
+            video.classList.add("visible");
+
+            // Wait until CSS transition ends, then play
+            video.addEventListener("transitionend", () => {
+              video.play();
+            }, { once: true });
+
+            // Only trigger once
+            observer.unobserve(video);
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the video is visible
+    );
+
+    observer.observe(video);
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const video2 = document.getElementById("memorama_video");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add fade-in class
+            video2.classList.add("visible");
+
+            // Wait until CSS transition ends, then play
+            video2.addEventListener("transitionend", () => {
+              video2.play();
+            }, { once: true });
+
+            // Only trigger once
+            observer.unobserve(video2);
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the video is visible
+    );
+
+    observer.observe(video2);
+  });
